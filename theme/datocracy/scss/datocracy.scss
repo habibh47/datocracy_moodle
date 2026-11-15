@@ -145,12 +145,12 @@ body.dato-dashboard{background:#faf6f1;}
 .dato-stats b{font-family:"Montserrat",sans-serif;font-size:24px;color:#0c0c0c;}
 .dato-grid{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);gap:28px;}
 .dato-grid h3{font-family:"Montserrat",sans-serif;font-weight:700;font-size:26px;margin:0 0 20px;}
-.dato-course{background:#fff;border-radius:16px;padding:16px;display:flex;align-items:center;gap:20px;margin-bottom:16px;}
-.dato-course img{width:140px;height:100px;object-fit:cover;border-radius:12px;flex:none;}
-.dato-course-body{flex:1;min-width:0;}
-.dato-course-body b{font-family:"Montserrat",sans-serif;font-size:17px;display:block;margin-bottom:12px;}
+.dato-card{background:#fff;border-radius:16px;padding:16px;display:flex;align-items:center;gap:20px;margin-bottom:16px;}
+.dato-card img{width:140px;height:100px;object-fit:cover;border-radius:12px;flex:none;}
+.dato-card-body{flex:1;min-width:0;}
+.dato-card-body b{font-family:"Montserrat",sans-serif;font-size:17px;display:block;margin-bottom:12px;}
 .dato-bar{display:flex;align-items:center;gap:12px;}
-.dato-bar i{display:block;height:8px;background:#f18619;border-radius:8px;max-width:220px;}
+.dato-bar .trk{display:block;width:220px;max-width:100%;height:8px;background:#f3ebe3;border-radius:8px;overflow:hidden;}.dato-bar i{display:block;height:8px;background:#f18619;}
 .dato-bar em{font-style:normal;font-size:13px;color:#3a4446;}
 .dato-btn{background:#f18619;color:#0c0c0c !important;font-family:"Montserrat",sans-serif;font-weight:700;border-radius:8px;padding:14px 22px;white-space:nowrap;}
 .dato-upcoming{background:#fff;border-radius:16px;padding:24px;}
@@ -159,9 +159,9 @@ body.dato-dashboard{background:#faf6f1;}
 .dato-upcoming p.none{font-weight:400;color:#3a4446;}
 @media (max-width:1199px){.dato-side{display:none;}.dato-main{margin-left:0;padding:20px;}.dato-stats{grid-template-columns:repeat(2,1fr);}.dato-grid{grid-template-columns:1fr;}}
 .dato-legacy{display:none !important;}
-.dato-course{flex-wrap:nowrap !important;}
-.dato-course img{margin:0 !important;}
-.dato-course .dato-btn{flex:none;margin-left:auto;width:auto !important;}
+.dato-card{flex-wrap:nowrap !important;}
+.dato-card img{margin:0 !important;}
+.dato-card .dato-btn{flex:none;margin-left:auto;width:auto !important;}
 .dato-bar{min-height:8px;}
 .dato-bar i{min-width:4px;}
 
@@ -192,3 +192,13 @@ body.dato-player-page{background:#fff;}
 @media (max-width:991px){.dp-body{grid-template-columns:1fr;}.dp-bar{padding:0 16px;gap:12px;}.dp-bar .dp-title{display:none;}}
 .dp-main .btn-primary,.dp-main .btn-secondary.active{background:#f18619 !important;border-color:#f18619 !important;color:#0c0c0c !important;}
 .dp-main .jumpmenu,.dp-main .activity-navigation .jumpmenu{display:none !important;}
+/* ===== Corrections issues de la relecture : espace apprenant ===== */
+.dato-content .btn-primary,.dato-content input[type="submit"].btn-primary{background:#f18619 !important;border-color:#f18619 !important;color:#0c0c0c !important;}
+.dato-content a:not(.btn){color:#b85c00;}
+.dato-content .btn-secondary{border-color:#f18619;color:#b85c00;background:#fff;}
+.dato-content .maincalendar,.dato-content #region-main,.dato-content .card{border-radius:16px;}
+.dato-stats>div{min-width:0;}
+.dato-main{overflow-x:hidden;}
+.dp-bar .dp-logo{flex:none;}
+.dp-bar .dp-logo img{max-width:140px;object-fit:contain;}
+@media (max-width:575px){.dato-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}.dato-stats div{padding:14px;gap:10px;}.dato-stats i{width:40px;height:40px;font-size:20px;}.dp-bar .dp-title{display:block;font-size:13px;text-align:left;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}.dp-progress i{width:60px;}.dp-exit{padding:8px 12px;}}

@@ -26,7 +26,7 @@ $on = [
 ];
 
 $templatecontext += $on + [
-    'pagetitle' => $PAGE->heading ?: format_string($PAGE->title),
+    'pagetitle' => $on['nav_on_assignments'] ? 'Devoirs' : ($on['nav_on_certificates'] ? 'Certificats' : ($on['nav_on_profile'] ? 'Mon profil' : ($PAGE->heading ?: format_string($PAGE->title)))),
     'fullname' => fullname($USER),
     'userpicture' => $OUTPUT->user_picture($USER, ['size' => 44, 'link' => false, 'class' => 'dato-avatar']),
     'url_dashboard' => (new moodle_url('/my/'))->out(false),

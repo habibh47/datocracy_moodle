@@ -42,18 +42,18 @@
                 <h3>{{#str}}continue, theme_datocracy{{/str}}</h3>
                 {{#hascourse}}
                 {{#cards}}
-                <div class="dato-course">
+                <div class="dato-card">
                     {{#img}}<img src="{{img}}" alt="">{{/img}}
-                    <div class="dato-course-body">
+                    <div class="dato-card-body">
                         <b>{{name}}</b>
-                        <div class="dato-bar"><i style="width:{{progress}}%"></i><em>{{progress}}%</em></div>
+                        <div class="dato-bar"><span class="trk"><i style="width:{{progress}}%"></i></span><em>{{progress}}%</em></div>
                     </div>
                     <a class="dato-btn" href="{{url}}">{{#str}}resume, theme_datocracy{{/str}}</a>
                 </div>
                 {{/cards}}
                 {{/hascourse}}
                 {{^hascourse}}
-                <div class="dato-course empty"><div class="dato-course-body"><b>{{#str}}no_course, theme_datocracy{{/str}}</b></div><a class="dato-btn" href="{{url_courses}}">{{#str}}discover, theme_datocracy{{/str}}</a></div>
+                <div class="dato-card empty"><div class="dato-card-body"><b>{{#str}}no_course, theme_datocracy{{/str}}</b></div><a class="dato-btn" href="{{url_courses}}">{{#str}}discover, theme_datocracy{{/str}}</a></div>
                 {{/hascourse}}
             </section>
             <section>
@@ -67,6 +67,7 @@
         <div class="dato-legacy">{{{ output.main_content }}}</div>
     </main>
     {{{ output.standard_after_main_region_html }}}
+    {{{ output.standard_end_of_body_html }}}
 </div>
 </body>
 </html>

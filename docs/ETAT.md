@@ -19,11 +19,16 @@
 - Lecteur de cours : contenu SCORM standard du cours d'origine, non reproduit.
 - Titres d'onglet produits par Moodle (« datocracy: … | datocracy »).
 
+## Fait depuis (15/11/2026)
+- Coque applicative vérifiée : Mes cours, calendrier (« Devoirs »), badges (« Certificats »), profil.
+- Lecteur de cours (barre marine, progression, sommaire) ; liens de cours des visiteurs renvoyés vers la fiche publique.
+- Relecture Q&A finale de l'espace apprenant et corrections (carte du tableau de bord, initialisation JavaScript des pages, titres, couleurs, mobile).
+
 ## Reste à faire
-1. Contrôle visuel de Mes cours, profil, calendrier (devoirs), badges (certificats) dans la coque applicative.
-2. Lecteur de cours.
-3. Redirection des cartes de cours vers la fiche du Figma ; relecture Q&A finale.
-4. URL de la vidéo de la section « Histoires d'apprenants » ; second cours « Bientôt ».
+1. URL de la vidéo de la section « Histoires d'apprenants » ; second cours « Bientôt ».
+2. Activer le suivi d'achèvement sur les activités du cours pour que progression et coches du lecteur évoluent.
+3. Calendrier et badges : habillage de contenu natif encore partiel (titre dupliqué dans le calendrier).
+4. Boutons Google / LinkedIn / Apple de la connexion (OAuth) ; validation des contenus provisoires par le client.
 
 ## À valider par le client
 - Réponses de la FAQ (questions 2, 3, 6 et 7), témoignages, pages légales (texte du Figma, mentionne des remboursements alors que le cours est gratuit).
