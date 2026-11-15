@@ -1,0 +1,50 @@
+{{> theme_boost/head }}
+
+<body {{{ bodyattributes }}}>
+{{> core/local/toast/wrapper}}
+
+<div id="wrapper" class="dato-player">
+    {{{ output.standard_top_of_body_html }}}
+
+    <header class="dp-bar">
+        <a class="dp-logo" href="{{url_exit}}"><img src="{{logo_url}}" alt="datocracy"></a>
+        <span class="dp-title">{{course_title}}</span>
+        <span class="dp-progress"><i><b style="width:{{progress}}%"></b></i><em>{{progress}}%</em></span>
+        <a class="dp-exit" href="{{url_exit}}">{{#str}}quit, theme_datocracy{{/str}}</a>
+    </header>
+
+    <div class="dp-body">
+        <main class="dp-main" id="region-main">
+            {{#activity_title}}<h1 class="dp-h1">{{activity_title}}</h1>{{/activity_title}}
+            {{{ output.course_content_header }}}
+            {{{ output.main_content }}}
+            {{{ output.activity_navigation }}}
+            {{{ output.course_content_footer }}}
+        </main>
+        <aside class="dp-side">
+            <h2>{{#str}}course_content, theme_datocracy{{/str}}</h2>
+            {{#chapters}}
+            <div class="dp-chap">
+                <b>{{title}}</b>
+                <ul>
+                    {{#lessons}}
+                    <li class="{{#current}}now{{/current}}">
+                        {{#locked}}<i class="ri-lock-line"></i><span>{{name}}</span>{{/locked}}
+                        {{^locked}}<i class="{{#done}}ri-check-line{{/done}}{{^done}}{{#current}}ri-play-line{{/current}}{{^current}}ri-circle-line{{/current}}{{/done}}"></i><a href="{{url}}">{{name}}</a>{{/locked}}
+                    </li>
+                    {{/lessons}}
+                </ul>
+            </div>
+            {{/chapters}}
+        </aside>
+    </div>
+    {{{ output.standard_after_main_region_html }}}
+</div>
+</body>
+</html>
+{{#js}}
+  M.util.js_pending('theme_boost/loader');
+  require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+  });
+{{/js}}

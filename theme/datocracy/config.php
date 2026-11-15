@@ -19,6 +19,7 @@ $THEME->layouts = [
     'mycourses' => ['file' => 'datocracy_app.php', 'regions' => ['side-pre'], 'defaultregion' => 'side-pre', 'options' => ['nonavbar' => true]],
     'mypublic' => ['file' => 'datocracy_app.php', 'regions' => ['side-pre'], 'defaultregion' => 'side-pre'],
     'standard' => ['file' => 'datocracy_standard.php', 'regions' => ['fullwidth-top', 'fullwidth-bottom', 'above-content', 'below-content', 'side-pre'], 'defaultregion' => 'side-pre'],
+    'incourse' => ['file' => 'datocracy_player.php', 'regions' => ['fullwidth-top', 'fullwidth-bottom', 'above-content', 'below-content', 'side-pre'], 'defaultregion' => 'side-pre'],
     'mydashboard' => [
         'file' => 'datocracy_my.php',
         'regions' => ['fullwidth-top', 'fullwidth-bottom', 'above-content', 'below-content', 'side-pre'],
@@ -27,6 +28,7 @@ $THEME->layouts = [
     ],
 ];
 
+$THEME->javascripts_footer = ['datocracy'];
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 $THEME->iconsystem = '\\theme_elan\\output\\icon_system_fontawesome';
 $THEME->haseditswitch = true;

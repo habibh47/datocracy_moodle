@@ -164,3 +164,31 @@ body.dato-dashboard{background:#faf6f1;}
 .dato-course .dato-btn{flex:none;margin-left:auto;width:auto !important;}
 .dato-bar{min-height:8px;}
 .dato-bar i{min-width:4px;}
+
+/* ===== Lecteur de cours ===== */
+body.dato-player-page{background:#fff;}
+.dato-player{min-height:100vh;display:flex;flex-direction:column;}
+.dp-bar{background:#192e4e;height:80px;display:flex;align-items:center;gap:32px;padding:0 40px;color:#fff;position:sticky;top:0;z-index:30;}
+.dp-bar .dp-logo img{height:44px;width:auto;display:block;}
+.dp-bar .dp-title{flex:1;text-align:center;font-family:"Montserrat",sans-serif;font-weight:600;font-size:18px;}
+.dp-progress{display:flex;align-items:center;gap:12px;font-size:14px;}
+.dp-progress i{display:block;width:160px;height:8px;background:#fff;border-radius:8px;overflow:hidden;}
+.dp-progress b{display:block;height:8px;background:#f18619;}
+.dp-progress em{font-style:normal;}
+.dp-exit{border:2px solid #f18619;color:#f18619 !important;border-radius:8px;padding:12px 26px;font-family:"Montserrat",sans-serif;font-weight:700;}
+.dp-body{display:grid;grid-template-columns:minmax(0,1fr) 380px;flex:1;}
+.dp-main{padding:32px 40px 60px;min-width:0;}
+.dp-h1{font-family:"Montserrat",sans-serif;font-weight:700;font-size:28px;margin:0 0 20px;}
+.dp-side{background:#faf6f1;padding:32px 28px;}
+.dp-side h2{font-family:"Montserrat",sans-serif;font-weight:700;font-size:22px;margin:0 0 20px;}
+.dp-chap{background:#fff;border-radius:12px;padding:20px;margin-bottom:18px;}
+.dp-chap>b{font-family:"Montserrat",sans-serif;font-size:17px;display:block;margin-bottom:14px;}
+.dp-chap ul{list-style:none;margin:0;padding:0;}
+.dp-chap li{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:8px;color:#3a4446;}
+.dp-chap li.now{background:#fce9d3;}
+.dp-chap li i{color:#f18619;font-size:18px;}
+.dp-chap li a{color:#0c0c0c;font-size:15px;}
+.dp-main .page-title-area,.dp-main .breadcrumb{display:none;}
+@media (max-width:991px){.dp-body{grid-template-columns:1fr;}.dp-bar{padding:0 16px;gap:12px;}.dp-bar .dp-title{display:none;}}
+.dp-main .btn-primary,.dp-main .btn-secondary.active{background:#f18619 !important;border-color:#f18619 !important;color:#0c0c0c !important;}
+.dp-main .jumpmenu,.dp-main .activity-navigation .jumpmenu{display:none !important;}

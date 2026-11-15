@@ -22,4 +22,6 @@ $string['discover'] = 'Découvrir les cours';
 $string['no_course'] = "Vous n'êtes inscrit à aucun cours pour le moment.";
 $string['upcoming'] = 'À venir';
 $string['no_upcoming'] = 'Rien à rendre dans les 30 prochains jours.';
+$string['quit'] = 'Quitter';
+$string['course_content'] = 'Contenu du cours';
 $string['privacy:metadata'] = "Le thème datocracy ne stocke aucune donnée personnelle.";
