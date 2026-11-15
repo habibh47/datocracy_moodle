@@ -1,23 +1,29 @@
 # Estimation du temps — saisie Clockify
 
-Période : 13 au 15 novembre 2026. Les durées ci-dessous sont des **estimations de l'effort** d'un développeur Moodle senior pour réaliser le même travail ; elles ne sont pas des temps mesurés. À ajuster avec le temps réellement passé devant l'écran avant de saisir dans Clockify.
+Période : 13 au 15 novembre 2026. Projet réalisé avec l'assistance d'un agent IA (Claude Code) qui a écrit et exécuté la quasi-totalité du code, des scripts et des vérifications visuelles.
 
-| # | Poste (description Clockify suggérée) | Estimation |
-|---|---|---|
-| 1 | Cadrage : accès serveur et Figma, lecture de la maquette, analyse du thème Elan | 3 h 00 |
-| 2 | Sauvegarde, installation d'Elan, charte graphique (polices, couleurs, logos, pied de page) | 4 h 00 |
-| 3 | Domaine de test : DNS, nginx, HTTPS, `wwwroot`, réglages d'accès public | 2 h 00 |
-| 4 | Page d'accueil : 15 blocs Elan, contenus, images, corrections CSS | 8 h 00 |
-| 5 | Pages de contenu : À propos, Formateurs, FAQ, Contact, Histoires, Témoignages, Galerie | 5 h 30 |
-| 6 | Pages légales, blog (articles, accès visiteurs), formulaire de contact, auto-inscription, pack de langue français | 3 h 30 |
-| 7 | Fiche du cours : contenu, styles, cours renommé, couverture | 2 h 30 |
-| 8 | Écran de connexion / inscription scindé et titres des pages natives | 3 h 30 |
-| 9 | Thème enfant `datocracy` : structure, SCSS, migration des personnalisations | 3 h 00 |
-| 10 | Tableau de bord sur mesure et coque applicative de l'espace apprenant | 5 h 00 |
-| 11 | Relectures Q&A (3 passes visuelles) et corrections qui en découlent | 4 h 00 |
-| 12 | Compte de test, vérifications connectées, documentation, dépôt Git | 2 h 00 |
-| | **Total estimé** | **46 h 00** |
+Les durées ci-dessous sont des **estimations**, pas des temps mesurés. Elles distinguent :
+- l'**effort de référence sans IA** : ce qu'un développeur Moodle senior aurait mis à réaliser seul le même travail ;
+- le **temps humain avec IA** : le temps de Habib (cadrage, accès, décisions, relecture des captures et des rapports Q&A, actions chez des tiers comme le DNS, validation). C'est cette colonne qu'il faut saisir dans Clockify, après ajustement avec le temps réellement passé.
 
-Fourchette à retenir selon la prudence souhaitée : 40 h (bas) à 50 h (haut).
+| # | Poste (description Clockify suggérée) | Référence sans IA | Temps humain avec IA |
+|---|---|---|---|
+| 1 | Cadrage : accès serveur et Figma, choix d'approche | 3 h 00 | 1 h 00 |
+| 2 | Installation d'Elan, charte graphique, pied de page (validations) | 4 h 00 | 1 h 00 |
+| 3 | Domaine de test : DNS chez le registrar, validation HTTPS | 2 h 00 | 0 h 30 |
+| 4 | Page d'accueil : relecture des rendus, retours | 8 h 00 | 2 h 00 |
+| 5 | Pages À propos, Formateurs, FAQ, Contact, Histoires, Témoignages, Galerie : relecture | 5 h 30 | 1 h 30 |
+| 6 | Pages légales, blog, contact, inscription, langue : décisions et validation | 3 h 30 | 1 h 00 |
+| 7 | Fiche du cours : relecture | 2 h 30 | 0 h 30 |
+| 8 | Écran de connexion scindé : relecture | 3 h 30 | 1 h 00 |
+| 9 | Thème enfant `datocracy` : choix d'architecture, validation | 3 h 00 | 0 h 45 |
+| 10 | Tableau de bord et espace apprenant : relecture, arbitrages | 5 h 00 | 1 h 30 |
+| 11 | Relectures Q&A (3 passes) : lecture des rapports, arbitrages | 4 h 00 | 1 h 30 |
+| 12 | Compte de test, documentation, dépôt Git, suivi du temps | 2 h 00 | 1 h 00 |
+| | **Total estimé** | **46 h 00** | **13 h 15** |
+
+Fourchette conseillée pour le temps humain avec IA : **10 h à 16 h**. Le temps d'exécution de l'agent (écriture des scripts, captures, déploiements, attente de compilation des styles) n'est pas compté, car il ne mobilise pas Habib.
+
+À savoir pour la saisie : l'historique horodaté de la session Claude Code permet de recouper ces chiffres avec le temps réellement passé devant l'écran.
 
 Non inclus : validation des contenus par le client, branchement OAuth (Google, LinkedIn, Apple), lecteur de cours, vidéo des témoignages, second cours.
