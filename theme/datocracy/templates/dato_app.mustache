@@ -1,0 +1,37 @@
+{{> theme_boost/head }}
+
+<body {{{ bodyattributes }}}>
+{{> core/local/toast/wrapper}}
+
+<div id="wrapper" class="dato-shell">
+    {{{ output.standard_top_of_body_html }}}
+
+    {{> theme_datocracy/dato_sidebar }}
+
+    <main class="dato-main">
+        <header class="dato-top">
+            <h1>{{{ pagetitle }}}</h1>
+            <div class="dato-top-right">
+                <span class="dato-lang"><a class="{{#lang_is_fr}}on{{/lang_is_fr}}" href="{{url_lang_fr}}">FR</a><a class="{{#lang_is_en}}on{{/lang_is_en}}" href="{{url_lang_en}}">EN</a></span>
+                <span class="dato-user">{{{userpicture}}} <b>{{fullname}}</b></span>
+            </div>
+        </header>
+
+        <div class="dato-content" id="region-main">
+            {{#hasregionmainsettingsmenu}}{{{ regionmainsettingsmenu }}}{{/hasregionmainsettingsmenu}}
+            {{{ output.course_content_header }}}
+            {{{ output.main_content }}}
+            {{{ output.activity_navigation }}}
+            {{{ output.course_content_footer }}}
+        </div>
+    </main>
+    {{{ output.standard_after_main_region_html }}}
+</div>
+</body>
+</html>
+{{#js}}
+  M.util.js_pending('theme_boost/loader');
+  require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+  });
+{{/js}}

@@ -1,0 +1,16 @@
+# Secrets et fichiers de session : ne jamais versionner
+figma_token*
+test_accounts*
+*.pem
+*.key
+id_*
+*_ed25519*
+.env
+# Thème commercial Elan et archives
+*.zip
+elan/
+# Captures et fichiers temporaires
+*.png
+*.jpg
+.playwright-mcp/
+*.log

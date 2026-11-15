@@ -1,0 +1,78 @@
+{{> theme_boost/head }}
+
+<body {{{ bodyattributes }}}>
+{{> core/local/toast/wrapper}}
+
+<div id="wrapper" class="dato-shell">
+    {{{ output.standard_top_of_body_html }}}
+
+    <aside class="dato-side">
+        <a class="dato-logo" href="{{url_dashboard}}"><img src="{{logo_url}}" alt="datocracy"></a>
+        <nav>
+            <a class="on" href="{{url_dashboard}}"><i class="ri-home-5-line"></i> {{#str}}nav_dashboard, theme_datocracy{{/str}}</a>
+            <a href="{{url_courses}}"><i class="ri-book-open-line"></i> {{#str}}nav_courses, theme_datocracy{{/str}}</a>
+            <a href="{{url_assignments}}"><i class="ri-file-list-3-line"></i> {{#str}}nav_assignments, theme_datocracy{{/str}}</a>
+            <a href="{{url_certificates}}"><i class="ri-award-line"></i> {{#str}}nav_certificates, theme_datocracy{{/str}}</a>
+            <a href="{{url_profile}}"><i class="ri-user-line"></i> {{#str}}nav_profile, theme_datocracy{{/str}}</a>
+        </nav>
+        <a class="dato-logout" href="{{url_logout}}"><i class="ri-logout-box-r-line"></i> {{#str}}nav_logout, theme_datocracy{{/str}}</a>
+    </aside>
+
+    <main class="dato-main">
+        <header class="dato-top">
+            <h1>{{#str}}nav_dashboard, theme_datocracy{{/str}}</h1>
+            <div class="dato-top-right">
+                <span class="dato-lang"><a class="{{#lang_is_fr}}on{{/lang_is_fr}}" href="{{url_lang_fr}}">FR</a><a class="{{#lang_is_en}}on{{/lang_is_en}}" href="{{url_lang_en}}">EN</a></span>
+                <span class="dato-user">{{{userpicture}}} <b>{{fullname}}</b></span>
+            </div>
+        </header>
+
+        <h2 class="dato-hello">{{#str}}hello, theme_datocracy, {{firstname}}{{/str}}</h2>
+        <p class="dato-sub">{{#hascourse}}{{#str}}hello_progress, theme_datocracy, {{progress_pct}}{{/str}}{{/hascourse}}{{^hascourse}}{{#str}}hello_empty, theme_datocracy{{/str}}{{/hascourse}}</p>
+
+        <section class="dato-stats">
+            <div><i class="ri-book-open-line"></i><span><b>{{stat_inprogress}}</b>{{#str}}stat_inprogress, theme_datocracy{{/str}}</span></div>
+            <div><i class="ri-check-line"></i><span><b>{{stat_completed}}</b>{{#str}}stat_completed, theme_datocracy{{/str}}</span></div>
+            <div><i class="ri-checkbox-circle-line"></i><span><b>{{stat_activities}}</b>{{#str}}stat_activities, theme_datocracy{{/str}}</span></div>
+            <div><i class="ri-award-line"></i><span><b>{{stat_badges}}</b>{{#str}}stat_badges, theme_datocracy{{/str}}</span></div>
+        </section>
+
+        <div class="dato-grid">
+            <section>
+                <h3>{{#str}}continue, theme_datocracy{{/str}}</h3>
+                {{#hascourse}}
+                {{#cards}}
+                <div class="dato-course">
+                    {{#img}}<img src="{{img}}" alt="">{{/img}}
+                    <div class="dato-course-body">
+                        <b>{{name}}</b>
+                        <div class="dato-bar"><i style="width:{{progress}}%"></i><em>{{progress}}%</em></div>
+                    </div>
+                    <a class="dato-btn" href="{{url}}">{{#str}}resume, theme_datocracy{{/str}}</a>
+                </div>
+                {{/cards}}
+                {{/hascourse}}
+                {{^hascourse}}
+                <div class="dato-course empty"><div class="dato-course-body"><b>{{#str}}no_course, theme_datocracy{{/str}}</b></div><a class="dato-btn" href="{{url_courses}}">{{#str}}discover, theme_datocracy{{/str}}</a></div>
+                {{/hascourse}}
+            </section>
+            <section>
+                <h3>{{#str}}upcoming, theme_datocracy{{/str}}</h3>
+                <div class="dato-upcoming">
+                    {{#hasupcoming}}{{#upcoming}}<p><span>{{date}}</span> {{name}}</p>{{/upcoming}}{{/hasupcoming}}
+                    {{^hasupcoming}}<p class="none">{{#str}}no_upcoming, theme_datocracy{{/str}}</p>{{/hasupcoming}}
+                </div>
+            </section>
+        </div>
+        <div class="dato-legacy">{{{ output.main_content }}}</div>
+    </main>
+    {{{ output.standard_after_main_region_html }}}
+</div>
+</body>
+</html>
+{{#js}}
+  M.util.js_pending('theme_boost/loader');
+  require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+  });
+{{/js}}
