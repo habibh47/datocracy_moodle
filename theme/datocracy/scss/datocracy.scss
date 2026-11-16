@@ -267,3 +267,79 @@ body.dato-admin .block_settings{display:block !important;}
 .block_elan_contact_area .single-contact-info-box .icon i{font-size:22px;line-height:48px;}
 .block_elan_contact_area .single-contact-info-box{margin-bottom:10px !important;}
 .block_elan_faq .accordion-title{font-family:"Montserrat",sans-serif !important;font-size:17px;}
+
+/* ===== Alignement sur la maquette (relecture du 16/11) : cartes, sections, bandeaux ===== */
+body{overflow-x:clip;}
+.owl-carousel,.testimonials-slides{max-width:100%;}
+.block_elan_feedback,.block_elan_feedback_2{overflow:hidden;}
+.sub-title{font-weight:700;color:#005a6d;font-size:13px;letter-spacing:.2px;}
+/* Hero */
+.block_elan_banner_1 .main-banner-content h1{text-wrap:wrap !important;}
+.block_elan_banner_1 .main-banner-content .sub-title{background:#fce9d3;color:#b85c00;border-radius:999px;padding:8px 18px;}.block_elan_banner_1 .main-banner-content .sub-title i{margin-right:8px;position:static;}
+.block_elan_banner_1 .main-banner-area{background:#faf6f1;}
+.dato-btn-outline{position:relative;z-index:3;display:inline-block;border:2px solid #f18619;color:#b85c00 !important;border-radius:8px;padding:12px 26px;margin-left:12px;font-family:"Montserrat",sans-serif;font-weight:700;}
+/* Cartes à icônes (Conçu pour vous, Ce que vous saurez faire, Vos besoins, Mission/Vision/Valeurs) */
+.features-area.bg-F9F9F9{background:#fff;}
+.features-box{background:#faf6f1;border-radius:20px;padding:28px;text-align:left;height:100%;box-shadow:none;}
+.features-box [class^="ri-"],.features-box [class*=" ri-"]{width:56px;height:56px;border-radius:50%;background:#fce9d3;display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 0 18px;color:#f18619;}
+.features-box h3{text-align:left;font-size:18px;}
+.features-box p{text-align:left;}
+/* Pourquoi datocracy : image circulaire, anneau bleu clair */
+.block_elan_about_area .about-inner-area img{aspect-ratio:1;object-fit:cover;border-radius:50%;border:8px solid #4bc0e6;width:480px;max-width:100%;display:block;margin:0 auto;}
+/* Citation et témoignages */
+.testimonials-area .lines,.funfacts-area .lines,.intro-video-area .lines{display:none !important;}
+.block_elan_feedback .testimonials-area{padding:56px 0;}
+.block_elan_feedback .single-testimonials-box::before{display:block !important;content:"\201C";background:none !important;position:static !important;font-size:72px;line-height:.8;color:#f18619;height:auto;width:auto;opacity:1;}
+.block_elan_feedback .single-testimonials-box h3::before{content:"\2014\00a0";}
+.block_elan_feedback_2 .testimonials-area.bg-color{background:#faf6f1;}
+.block_elan_feedback_2 .testimonials-area h2{color:#0c0c0c;}
+.block_elan_feedback_2 .testimonials-area .sub-title{color:#005a6d !important;}
+.block_elan_feedback_2 .single-testimonials-box{border-radius:16px;box-shadow:none;}
+.block_elan_feedback_2 .single-testimonials-box::before{display:block !important;content:"\2605\2605\2605\2605\2605";background:none !important;position:static !important;color:#f18619;letter-spacing:2px;font-size:16px;height:auto;width:auto;margin-bottom:12px;opacity:1;}
+/* Vidéo */
+.intro-video-area.bg-color{background:#005a6d;}
+.intro-video-area::before,.intro-video-area::after{display:none !important;}
+.block_elan_video_area .video-box{position:relative;max-width:880px;margin:0 auto;}
+.block_elan_video_area .video-box img{width:100%;border-radius:24px;display:block;}
+.block_elan_video_area .video-box::after{content:"\25B6";position:absolute;left:50%;top:50%;width:88px;height:88px;margin:-44px 0 0 -44px;border-radius:50%;background:#fff;color:#f18619;display:flex;align-items:center;justify-content:center;font-size:32px;padding-left:6px;}
+/* Chiffres : bande marine */
+.funfacts-area.bg-color{background:#192e4e !important;}
+/* CTA accueil : bandeau orange */
+#page-site-index .block_elan_cta .container{background:#f18619;border-radius:24px;padding:48px;}
+#page-site-index .block_elan_cta .get-instant-image{display:none;}
+#page-site-index .block_elan_cta .col-lg-6{flex:0 0 100%;max-width:100%;}
+#page-site-index .block_elan_cta h2,#page-site-index .block_elan_cta p{color:#0c0c0c;}
+#page-site-index .block_elan_cta .default-btn{background:#005a6d;color:#fff !important;}
+/* Certification : bandeau pleine largeur centré */
+.block_elan_cta_three{padding:0 !important;}
+.block_elan_cta_three .container{max-width:none;padding:0;}
+.block_elan_cta_three .unlimited-access-content{border-radius:0 !important;text-align:center;padding:64px 24px !important;}
+.block_elan_cta_three .row>[class*="col-"]{flex:0 0 100%;max-width:100%;text-align:center !important;}
+.block_elan_cta_three .row>[class*="col-"]+[class*="col-"]{margin-top:24px;}
+/* Blog : cartes, un seul bouton */
+.single-blog-post{background:#faf6f1;border-radius:16px;overflow:hidden;height:100%;box-shadow:none;}
+.single-blog-post .link-btn{display:none !important;}
+.dato-blog-all{text-align:center;margin-top:32px;}
+/* Pied de page */
+.footer-area h3,.footer-area h4,.footer-area h5{font-size:16px !important;}
+.footer-area .social-links{display:none !important;}
+.footer-area .copyright-area p{margin-left:-18px;}
+/* Bascule de langue FR / EN */
+li.langmenu{display:none !important;}
+.dato-lang-switch{display:inline-flex;background:#faf6f1;border-radius:8px;padding:4px;margin-right:12px;}
+.dato-lang-switch a{padding:8px 12px;border-radius:6px;font-weight:700;font-size:13px;color:#0c0c0c !important;font-family:"Montserrat",sans-serif;}
+.dato-lang-switch a.on{background:#f18619;}
+/* Boutons Moodle bleus -> orange */
+.btn-primary,input[type="submit"].btn-primary,button.btn-primary{background:#f18619 !important;border-color:#f18619 !important;color:#0c0c0c !important;}
+.btn-secondary{border-color:#f18619;color:#b85c00;}
+.dp-main a:not(.btn){color:#b85c00;}
+/* Pages natives et divers */
+.dato-course .dc-meta{display:none;}
+.dato-top{margin-bottom:24px;}
+#page-user-contactsitesupport #region-main>h1,#page-user-contactsitesupport #region-main h1.h2{display:none;}
+#page-user-contactsitesupport #region-main{padding:40px 0;}
+.dato-contact-card{box-sizing:border-box;width:100%;}
+@media (max-width:575px){.dato-card{flex-wrap:wrap !important;}.dato-card img{width:100% !important;height:160px !important;}.dato-card .dato-btn{margin-left:0 !important;}.dato-btn-outline{margin:12px 0 0 0;}}
+.block_elan_feedback .single-testimonials-box,.block_elan_feedback .single-testimonials-box *{text-align:center !important;}
+.block_elan_feedback .single-testimonials-box p{font-weight:700 !important;font-size:26px !important;line-height:1.5;}
+.block_elan_feedback .single-testimonials-box{padding:24px 0 !important;}

@@ -33,7 +33,27 @@
         var t = document.querySelector('.block_elan_faq .accordion-title');
         if (t && !document.querySelector('.block_elan_faq .accordion-item.active, .block_elan_faq .accordion-title.active')) { t.click(); }
     }
-    function init() { addContactCard(); setTimeout(openFirstFaq, 900); }
+    // Éléments d'interface ajoutés côté navigateur : 2e bouton du hero, bouton unique du blog, bascule FR/EN, « Read More ».
+    function addExtras() {
+        var hero = document.querySelector('.block_elan_banner_1 .main-banner-content .default-btn');
+        if (hero && !document.querySelector('.dato-btn-outline')) {
+            var a = document.createElement('a'); a.className = 'dato-btn-outline'; a.href = '/course/index.php'; a.textContent = 'Découvrir les cours';
+            hero.parentNode.insertBefore(a, hero.nextSibling);
+        }
+        var blog = document.querySelector('.block_elan_blog_area .container');
+        if (blog && !blog.querySelector('.dato-blog-all')) {
+            var d = document.createElement('div'); d.className = 'dato-blog-all'; d.innerHTML = '<a class="default-btn" href="/blog/index.php">Tous les articles</a>'; blog.appendChild(d);
+        }
+        var box = document.querySelector('.others-option');
+        if (box && !box.querySelector('.dato-lang-switch')) {
+            var fr = (document.documentElement.lang || '').indexOf('fr') === 0;
+            var s = document.createElement('div'); s.className = 'option-item dato-lang-switch';
+            var url = function (l) { var u = new URL(location.href); u.searchParams.set('lang', l); return u.toString(); };
+            s.innerHTML = '<a class="' + (fr ? 'on' : '') + '" href="' + url('fr') + '">FR</a><a class="' + (fr ? '' : 'on') + '" href="' + url('en') + '">EN</a>';
+            box.insertBefore(s, box.firstChild);
+        }
+        document.querySelectorAll('a, span').forEach(function (n) { if (n.children.length === 0 && n.textContent.trim() === 'Read More') { n.textContent = 'Lire la suite'; } });
+    }    function init() { addContactCard(); addExtras(); setTimeout(addExtras, 1200); setTimeout(openFirstFaq, 900); }
     if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
     if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', rewrite); } else { rewrite(); }
     setTimeout(rewrite, 1500);
