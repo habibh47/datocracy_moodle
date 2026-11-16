@@ -26,7 +26,7 @@
 
 ## Reste à faire
 1. URL de la vidéo de la section « Histoires d'apprenants » ; second cours « Bientôt ».
-2. Activer le suivi d'achèvement sur les activités du cours pour que progression et coches du lecteur évoluent.
+2. Suivi d'achèvement activé sur le cours (script `provisioning/14_suivi_achevement_cours.php`) : une leçon SCORM est terminée quand le paquet signale « terminé » ou « réussi ». À vérifier en jouant une leçon jusqu'au bout avec le compte de test : la progression et les coches du lecteur en dépendent.
 3. Calendrier et badges : habillage de contenu natif encore partiel (titre dupliqué dans le calendrier).
 4. Boutons Google / LinkedIn / Apple de la connexion (OAuth) ; validation des contenus provisoires par le client.
 
