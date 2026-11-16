@@ -343,3 +343,67 @@ li.langmenu{display:none !important;}
 .block_elan_feedback .single-testimonials-box,.block_elan_feedback .single-testimonials-box *{text-align:center !important;}
 .block_elan_feedback .single-testimonials-box p{font-weight:700 !important;font-size:26px !important;line-height:1.5;}
 .block_elan_feedback .single-testimonials-box{padding:24px 0 !important;}
+
+/* ===== Dernière relecture (16/11) ===== */
+html{overflow-x:clip;}
+.owl-stage-outer{overflow:hidden;}
+.go-top{right:16px !important;left:auto !important;}
+/* Titre des témoignages lisible sur fond crème */
+.block_elan_feedback_2 .section-title h2,.block_elan_feedback_2 .testimonials-area h2{color:#0c0c0c !important;}
+/* Hero : plus de motif sur les boutons, titre sur 3 lignes */
+.block_elan_banner_1 .popular-tag{display:none !important;}
+.block_elan_banner_1 .main-banner-content{max-width:600px;}
+.block_elan_banner_1 .main-banner-image img{max-width:100%;}
+/* Étiquette de prix des cartes de cours : « Gratuit » */
+.single-courses-box .price.shadow:empty{display:block;}
+.single-courses-box .price.shadow:empty::after{content:"Gratuit";color:#fff;font-weight:700;font-size:13px;padding:0 6px;}
+/* Paddings manquants (vidéo, blog) */
+.block_elan_video_area .container,.block_elan_blog_area .container{padding-top:96px;}
+.block_elan_video_area .container{padding-bottom:72px;}
+.block_elan_blog_area .container{padding-bottom:72px;}
+/* Contact : alignement du texte et de la carte */
+.block_elan_contact_area .contact-content{padding-right:48px;}
+.block_elan_contact_area .contact-image{align-self:flex-start;}
+.dato-contact-card{max-width:100%;overflow:hidden;}
+.dato-contact-card p{overflow-wrap:anywhere;margin-right:0;}
+/* « Conçu pour vous » centré */
+.block_elan_banner_1+.block_elan_features_area_two .features-box{text-align:center;}
+.block_elan_banner_1+.block_elan_features_area_two .features-box [class^="ri-"],.block_elan_banner_1+.block_elan_features_area_two .features-box [class*=" ri-"]{margin-left:auto;margin-right:auto;}
+.block_elan_banner_1+.block_elan_features_area_two .features-box h3,.block_elan_banner_1+.block_elan_features_area_two .features-box p{text-align:center;}
+/* Pourquoi datocracy : section crème pleine largeur, atouts en pastilles */
+.block_elan_about_area .about-area{background:#faf6f1;padding:96px 0;}
+.block_elan_about_area .about-inner-area{background:transparent !important;}
+.block_elan_about_area .features-list{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.block_elan_about_area .features-list li{background:#fff;border-radius:10px;padding:12px 18px;font-family:"Montserrat",sans-serif;font-weight:600;}
+.block_elan_course_filter{background:#faf6f1;}
+/* CTA orange : section crème, texte à gauche et bouton à droite */
+#page-site-index .block_elan_cta{background:#faf6f1;}
+#page-site-index .block_elan_cta .get-instant-content{display:grid;grid-template-columns:1fr auto;align-items:center;gap:8px 24px;}
+#page-site-index .block_elan_cta .get-instant-content>.default-btn{grid-column:2;grid-row:1 / span 3;}
+/* Blog : badge, bouton en contour, cartes de même hauteur */
+.block_elan_blog_area .row>[class*="col-"]{display:flex;}
+.block_elan_blog_area .single-blog-post{width:100%;}
+.single-blog-post .image{padding:12px 12px 0;}
+.single-blog-post .image img{border-radius:12px;}
+.dato-blog-all .default-btn{background:transparent !important;border:2px solid #f18619;color:#b85c00 !important;}
+/* Équipe : cartes crème, avatars à anneau bleu */
+.single-team-member{background:#faf6f1 !important;border-radius:20px;}
+.single-team-member .image img{width:130px !important;height:130px;}
+.team-area.bg-color,.team-area{background:#fff !important;}
+body.cmid-8 .block_elan_instructor_area .row>[class*="col-lg-3"]{flex:0 0 33.3333%;max-width:33.3333%;}
+body.cmid-8 .block_elan_instructor_area .row{justify-content:center;}
+/* Histoires : pastilles pleines, cartes blanches sur crème ; Témoignages : pas de bloc de titre vide */
+body.cmid-11 .features-area{background:#faf6f1;}
+body.cmid-11 .features-box{background:#fff;}
+body.cmid-11 .features-box [class*="ri-number"]{background:#f18619;color:#0c0c0c;font-weight:700;}
+body.cmid-12 .block_elan_feedback_2 .section-title{display:none;}
+/* Pages légales : sommaire en carte */
+.dato-legal{display:grid;grid-template-columns:300px 1fr;gap:40px;padding:48px 0;}
+.dato-legal aside{background:#faf6f1;border-radius:16px;padding:24px;align-self:start;}
+.dato-legal aside ul{list-style:none;padding:0;margin:0;}
+.dato-legal aside li{padding:10px 12px;border-radius:8px;color:#0c0c0c;font-weight:600;}
+.dato-legal aside li:first-child{background:#fce9d3;}
+.dato-legal-body p{color:#3a4446;}
+@media (max-width:991px){.dato-legal{grid-template-columns:1fr;}}
+/* En-tête : fil d'Ariane aligné */
+.page-title-area .breadcrumb{padding-left:0;margin-left:0;}

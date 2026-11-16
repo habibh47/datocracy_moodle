@@ -52,8 +52,16 @@
             s.innerHTML = '<a class="' + (fr ? 'on' : '') + '" href="' + url('fr') + '">FR</a><a class="' + (fr ? '' : 'on') + '" href="' + url('en') + '">EN</a>';
             box.insertBefore(s, box.firstChild);
         }
-        document.querySelectorAll('a, span').forEach(function (n) { if (n.children.length === 0 && n.textContent.trim() === 'Read More') { n.textContent = 'Lire la suite'; } });
-    }    function init() { addContactCard(); addExtras(); setTimeout(addExtras, 1200); setTimeout(openFirstFaq, 900); }
+        var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+        var node;
+        while ((node = w.nextNode())) {
+            if (node.nodeValue.indexOf('Read More') !== -1) { node.nodeValue = node.nodeValue.replace('Read More', 'Lire la suite'); }
+        }
+        document.querySelectorAll('.navbar-nav > li.dropdown').forEach(function (li) {
+            if (/Fran\u00e7ais|English/.test(li.textContent)) { li.style.display = 'none'; }
+        });
+    }
+    function init() { addContactCard(); addExtras(); setTimeout(addExtras, 1200); setTimeout(openFirstFaq, 900); }
     if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
     if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', rewrite); } else { rewrite(); }
     setTimeout(rewrite, 1500);
