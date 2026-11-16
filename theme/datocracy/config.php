@@ -4,7 +4,11 @@ defined('MOODLE_INTERNAL') || die();
 
 $THEME->name = 'datocracy';
 $THEME->parents = ['elan', 'boost'];
-// Feuilles d'Elan : héritées du thème parent (chargées avant le SCSS de Boost : voir les surcharges d'ordre dans scss/datocracy.scss).
+// Feuilles d'Elan : déclarées comme feuilles du thème enfant (copiées dans style/ au déploiement, voir bin/sync_elan_sheets.sh)
+// pour être chargées après le SCSS de Boost, comme dans Elan ; celles du parent sont exclues pour éviter les doublons.
+$elansheets = ['owl-carousel', 'owl-theme-default', 'magnific-popup', 'animate', 'boxicons', 'remixicon', 'odometer', 'meanmenu', 'style', 'envytheme-mdl-core', 'responsive', 'dashboard', 'compatibility'];
+$THEME->sheets = $elansheets;
+$THEME->parents_exclude_sheets = ['elan' => $elansheets];
 $THEME->editor_sheets = [];
 
 // SCSS : contenu du parent + feuille datocracy (voir lib.php).

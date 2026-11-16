@@ -14,3 +14,6 @@ elan/
 *.jpg
 .playwright-mcp/
 *.log
+
+# Feuilles d'Elan copiées au déploiement (licence commerciale)
+theme/datocracy/style/

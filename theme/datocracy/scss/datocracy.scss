@@ -212,3 +212,26 @@ body.dato-player-page{background:#fff;}
 body.dato-admin .block_settings{display:block !important;}
 .dato-login{display:inline-block;border:2px solid #f18619;color:#b85c00 !important;border-radius:8px;padding:11px 24px;font-family:"Montserrat",sans-serif;font-weight:600;margin-right:12px;background:transparent;}
 .dato-login:hover{background:#fce9d3;}
+/* ===== Retours de relecture (alignement, doublons) ===== */
+#page-mod-page-view .elan-main>h2,#page-mod-page-view #region-main>h2:first-child{display:none !important;}
+.single-team-member{height:100%;}
+.single-team-member .image{padding:24px 24px 0;text-align:center;}
+.single-team-member .image img{width:180px !important;height:180px;border-radius:50%;object-fit:cover;margin:0 auto;display:block;}
+.single-team-member .share{display:none !important;}
+.single-testimonials-box{height:100%;}
+.block_elan_contact_area p,.block_elan_contact_area span,.block_elan_contact_area a{white-space:nowrap;word-break:normal;overflow-wrap:normal;}
+.page-title-area{overflow:hidden;}
+.page-title-area .breadcrumb{flex-wrap:wrap;}
+.page-title-area .breadcrumb-item,.page-title-area .breadcrumb-item *{overflow-wrap:anywhere;color:#fff !important;}
+#page-blog-index .page-title-area .breadcrumb-item:nth-child(2){display:none;}
+.dato-content h2{font-family:"Montserrat",sans-serif;font-size:24px;text-align:left;margin:16px 0;}
+.dato-content h3,.dato-content .card-title,.dato-content .card-header{font-family:"Montserrat",sans-serif;font-weight:700;}
+#page-login-index .btn-primary,#page-login-signup .btn-primary,#page-login-forgot_password .btn-primary{background:#f18619 !important;border-color:#f18619 !important;color:#0c0c0c !important;}
+#page-login-index .login-container .form-control,#page-login-signup .login-container .form-control,#page-login-forgot_password .login-container .form-control{width:100%;max-width:100%;}
+.footer-area .social-links,.footer-area .copyright-area{padding-left:0;margin-left:0;}
+/* ===== Retours de relecture : motifs décoratifs d'Elan qui gênent la lecture ===== */
+.single-testimonials-box::before{display:none !important;}
+.team-area.bg-color{background:#f9f9f9 !important;}
+.team-area::before,.team-area::after{display:none !important;}
+.block_elan_cta{padding:64px 0 !important;}
+.block_elan_cta .container{text-align:left;}
