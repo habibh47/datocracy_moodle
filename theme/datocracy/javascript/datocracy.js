@@ -2,6 +2,8 @@
 // mènent à la fiche publique du cours.
 (function () {
     var publicsheets = {'2': '/mod/page/view.php?id=17'};
+    var EN = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+    function T(fr, en) { return EN ? en : fr; }
     function isLoggedIn() {
         return !!document.querySelector('.usermenu, [data-region="usermenu"], .dato-shell, .dato-player');
     }
@@ -10,7 +12,7 @@
         if (!box || box.querySelector('.dato-login')) { return; }
         var item = document.createElement('div');
         item.className = 'option-item';
-        item.innerHTML = '<a class="dato-login" href="/login/index.php">Connexion</a>';
+        item.innerHTML = '<a class="dato-login" href="/login/index.php">' + T('Connexion', 'Sign in') + '</a>';
         box.insertBefore(item, box.firstChild);
     }
     function rewrite() {
@@ -25,7 +27,7 @@
     function addContactCard() {
         document.querySelectorAll('.block_elan_contact_area .contact-image').forEach(function (box) {
             if (box.querySelector('.dato-contact-card')) { return; }
-            box.innerHTML = '<div class="dato-contact-card"><h3>Envoyez-nous un message</h3><p>Une question sur nos cours ou un projet de formation ? Nous répondons sous 24 h.</p><a class="default-btn" href="/user/contactsitesupport.php">Envoyer le message</a></div>';
+            box.innerHTML = '<div class="dato-contact-card"><h3>' + T('Envoyez-nous un message', 'Send us a message') + '</h3><p>' + T('Une question sur nos cours ou un projet de formation ? Nous répondons sous 24 h.', 'A question about our courses or a training project? We reply within 24 hours.') + '</p><a class="default-btn" href="/user/contactsitesupport.php">' + T('Envoyer le message', 'Send message') + '</a></div>';
         });
     }
     // FAQ : première question ouverte, comme dans la maquette.
@@ -40,26 +42,29 @@
             var author = c.querySelector('.author span');
             var list = c.querySelector('.courses-box-list');
             if (/MPME/.test(title)) {
-                var price = c.querySelector('.price'); if (price) { price.textContent = 'Bientôt'; }
-                if (author) { author.textContent = 'Outils et données mobiles'; c.querySelector('.author').classList.add('dato-sub'); }
+                var price = c.querySelector('.price'); if (price) { price.textContent = T('Bientôt', 'Coming soon'); }
+                if (author) { author.textContent = T('Outils et données mobiles', 'Mobile tools and data'); c.querySelector('.author').classList.add('dato-sub'); }
                 if (list) { list.classList.add('dato-hide'); }
                 c.querySelectorAll('a').forEach(function (a) { a.setAttribute('href', '#'); a.style.pointerEvents = 'none'; });
             } else if (list && list.children.length >= 2 && !list.dataset.dato) {
                 list.dataset.dato = '1';
-                list.children[0].innerHTML = '<i class="ri-book-open-line"></i> 7 chapitres';
+                list.children[0].innerHTML = '<i class="ri-book-open-line"></i> ' + T('7 chapitres', '7 chapters');
                 list.children[1].innerHTML = '<i class="ri-time-line"></i> 18 h';
             }
-        });        var first = document.querySelector('.block_elan_features_area_two');
+        });        if (EN) {
+            document.querySelectorAll('.others-option .default-btn').forEach(function (b) { if (b.textContent.trim() === 'Inscription') { b.textContent = 'Sign up'; } });
+            document.querySelectorAll('.category-list a').forEach(function (a) { if (a.textContent.trim() === 'Cours en ligne') { a.textContent = 'Online course'; } });
+        }        var first = document.querySelector('.block_elan_features_area_two');
         if (first) { first.classList.add('dato-center'); }
-        document.querySelectorAll('.single-courses-box .price').forEach(function (p) { if (!p.textContent.trim()) { p.textContent = 'Gratuit'; } });
+        document.querySelectorAll('.single-courses-box .price').forEach(function (p) { if (!p.textContent.trim()) { p.textContent = T('Gratuit', 'Free'); } });
         var hero = document.querySelector('.block_elan_banner_1 .main-banner-content .default-btn');
         if (hero && !document.querySelector('.dato-btn-outline')) {
-            var a = document.createElement('a'); a.className = 'dato-btn-outline'; a.href = '/course/index.php'; a.textContent = 'Découvrir les cours';
+            var a = document.createElement('a'); a.className = 'dato-btn-outline'; a.href = '/course/index.php'; a.textContent = T('Découvrir les cours', 'Discover courses');
             hero.parentNode.insertBefore(a, hero.nextSibling);
         }
         var blog = document.querySelector('.block_elan_blog_area .container');
         if (blog && !blog.querySelector('.dato-blog-all')) {
-            var d = document.createElement('div'); d.className = 'dato-blog-all'; d.innerHTML = '<a class="default-btn" href="/blog/index.php">Tous les articles</a>'; blog.appendChild(d);
+            var d = document.createElement('div'); d.className = 'dato-blog-all'; d.innerHTML = '<a class="default-btn" href="/blog/index.php">' + T('Tous les articles', 'All articles') + '</a>'; blog.appendChild(d);
         }
         var box = document.querySelector('.others-option');
         if (box && !box.querySelector('.dato-lang-switch')) {
@@ -72,7 +77,7 @@
         var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
         var node;
         while ((node = w.nextNode())) {
-            if (node.nodeValue.indexOf('Read More') !== -1) { node.nodeValue = node.nodeValue.replace('Read More', 'Lire la suite'); }
+            if (!EN && node.nodeValue.indexOf('Read More') !== -1) { node.nodeValue = node.nodeValue.replace('Read More', 'Lire la suite'); }
         }
         document.querySelectorAll('.navbar-nav > li.dropdown').forEach(function (li) {
             if (/Fran\u00e7ais|English/.test(li.textContent)) { li.style.display = 'none'; }

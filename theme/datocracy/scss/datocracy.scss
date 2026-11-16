@@ -443,3 +443,14 @@ body.cmid-8 .team-area{padding-top:32px !important;padding-bottom:8px !important
 @media (max-width:991px){.block_elan_banner_1 .main-banner-image{margin-bottom:32px;}}
 .single-team-member .dato-bio{color:#3a4446 !important;}
 .single-team-member .content span.dato-bio{color:#3a4446 !important;}
+
+/* ===== Version anglaise des textes générés en CSS ===== */
+html:lang(en) #page-course-index .page-title-content h2::after{content:"All courses";}
+html:lang(en) #page-login-index .page-title-content h2::after{content:"Sign in";}
+html:lang(en) #page-login-signup .page-title-content h2::after{content:"Create an account";}
+html:lang(en) #page-login-forgot_password .page-title-content h2::after{content:"Forgot password";}
+html:lang(en) #page-user-contactsitesupport .page-title-content h2::after{content:"Contact us";}
+html:lang(en) #page-login-index .loginform h1.h2::after{content:"Welcome back!";}
+html:lang(en) #page-login-index .loginform p.text-muted::after{content:"Sign in to continue your courses.";}
+html:lang(en) #page-login-index::after,html:lang(en) #page-login-signup::after,html:lang(en) #page-login-forgot_password::after{content:"Access to data is access to power.";}
+.dato-login,.others-option .default-btn{white-space:nowrap;}
