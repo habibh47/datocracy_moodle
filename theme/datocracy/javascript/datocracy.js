@@ -35,7 +35,21 @@
     }
     // Éléments d'interface ajoutés côté navigateur : 2e bouton du hero, bouton unique du blog, bascule FR/EN, « Read More ».
     function addExtras() {
-        var first = document.querySelector('.block_elan_features_area_two');
+        document.querySelectorAll('.single-courses-box').forEach(function (c) {
+            var title = (c.querySelector('h3') || {}).textContent || '';
+            var author = c.querySelector('.author span');
+            var list = c.querySelector('.courses-box-list');
+            if (/MPME/.test(title)) {
+                var price = c.querySelector('.price'); if (price) { price.textContent = 'Bientôt'; }
+                if (author) { author.textContent = 'Outils et données mobiles'; c.querySelector('.author').classList.add('dato-sub'); }
+                if (list) { list.classList.add('dato-hide'); }
+                c.querySelectorAll('a').forEach(function (a) { a.setAttribute('href', '#'); a.style.pointerEvents = 'none'; });
+            } else if (list && list.children.length >= 2 && !list.dataset.dato) {
+                list.dataset.dato = '1';
+                list.children[0].innerHTML = '<i class="ri-book-open-line"></i> 7 chapitres';
+                list.children[1].innerHTML = '<i class="ri-time-line"></i> 18 h';
+            }
+        });        var first = document.querySelector('.block_elan_features_area_two');
         if (first) { first.classList.add('dato-center'); }
         document.querySelectorAll('.single-courses-box .price').forEach(function (p) { if (!p.textContent.trim()) { p.textContent = 'Gratuit'; } });
         var hero = document.querySelector('.block_elan_banner_1 .main-banner-content .default-btn');

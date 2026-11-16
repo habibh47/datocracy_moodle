@@ -427,3 +427,19 @@ body.cmid-12 .block_elan_feedback_2 .section-title{display:none;}
 .features-box .ri-number-2::before{content:"2" !important;}
 .features-box .ri-number-3::before{content:"3" !important;}
 .features-box .ri-number-4::before{content:"4" !important;}
+/* ===== Derniers points : cartes de cours, équipe, témoignages en grille, mobile ===== */
+.single-courses-box .author{display:none;}
+.single-courses-box .author.dato-sub{display:block;}
+.single-courses-box .courses-box-list.dato-hide{display:none !important;}
+.single-team-member{border-radius:20px !important;overflow:hidden;}
+.single-team-member .dato-bio{display:block;color:#3a4446;font-size:14px;line-height:1.6;margin-top:10px;font-family:"Open Sans",sans-serif;}
+body.cmid-8 .team-area{padding-top:32px !important;padding-bottom:8px !important;}
+/* Témoignages : grille de 3 cartes au lieu du carrousel */
+.block_elan_feedback_2 .testimonials-slides.owl-carousel .owl-stage{display:grid !important;grid-template-columns:repeat(3,1fr);gap:24px;width:100% !important;transform:none !important;}
+.block_elan_feedback_2 .testimonials-slides.owl-carousel .owl-item{width:auto !important;margin:0 !important;float:none !important;}
+.block_elan_feedback_2 .testimonials-slides.owl-carousel .owl-item.cloned{display:none !important;}
+.block_elan_feedback_2 .owl-nav,.block_elan_feedback_2 .owl-dots{display:none !important;}
+@media (max-width:991px){.block_elan_feedback_2 .testimonials-slides.owl-carousel .owl-stage{grid-template-columns:1fr;}}
+@media (max-width:991px){.block_elan_banner_1 .main-banner-image{margin-bottom:32px;}}
+.single-team-member .dato-bio{color:#3a4446 !important;}
+.single-team-member .content span.dato-bio{color:#3a4446 !important;}
