@@ -4,7 +4,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $THEME->name = 'datocracy';
 $THEME->parents = ['elan', 'boost'];
-$THEME->sheets = [];
+// Feuilles d'Elan : héritées du thème parent (chargées avant le SCSS de Boost : voir les surcharges d'ordre dans scss/datocracy.scss).
 $THEME->editor_sheets = [];
 
 // SCSS : contenu du parent + feuille datocracy (voir lib.php).

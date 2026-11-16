@@ -1,3 +1,8 @@
+/* ===== Ordre des feuilles : dans un thème enfant, Elan est chargé avant le SCSS de Boost.
+   On rétablit ici les règles de base d'Elan que Boost écrase (titres, liens). ===== */
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{font-weight:700;color:var(--blackColor);}
+a{color:var(--blackColor);text-decoration:none;}
+a:hover{color:var(--mainColor);}
 body,p,li,input,select,textarea{font-family:"Open Sans",sans-serif;}
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.btn,.nav-link,.navbar a{font-family:"Montserrat",sans-serif !important;}
 .footer-area{background:#192e4e !important;}
@@ -202,3 +207,8 @@ body.dato-player-page{background:#fff;}
 .dp-bar .dp-logo{flex:none;}
 .dp-bar .dp-logo img{max-width:140px;object-fit:contain;}
 @media (max-width:575px){.dato-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}.dato-stats div{padding:14px;gap:10px;}.dato-stats i{width:40px;height:40px;font-size:20px;}.dp-bar .dp-title{display:block;font-size:13px;text-align:left;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}.dp-progress i{width:60px;}.dp-exit{padding:8px 12px;}}
+/* ===== Retours utilisateur : blocs Moodle de navigation masqués, bouton Connexion ===== */
+.block_navigation,.block_site_main_menu,.block_settings{display:none !important;}
+body.dato-admin .block_settings{display:block !important;}
+.dato-login{display:inline-block;border:2px solid #f18619;color:#b85c00 !important;border-radius:8px;padding:11px 24px;font-family:"Montserrat",sans-serif;font-weight:600;margin-right:12px;background:transparent;}
+.dato-login:hover{background:#fce9d3;}
