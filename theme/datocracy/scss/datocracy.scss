@@ -235,3 +235,35 @@ body.dato-admin .block_settings{display:block !important;}
 .team-area::before,.team-area::after{display:none !important;}
 .block_elan_cta{padding:64px 0 !important;}
 .block_elan_cta .container{text-align:left;}
+/* ===== FAQ (colonne unique, comme la maquette) ===== */
+.block_elan_faq .card-text{background:#faf6f1;padding:56px 0;}
+.block_elan_faq .container{max-width:900px;}
+.block_elan_faq .row>[class*="col-"]{flex:0 0 100%;max-width:100%;}
+.block_elan_faq .accordion{padding:0;margin:0;list-style:none;}
+.block_elan_faq .accordion-item{background:transparent;border:0;border-radius:12px;margin-bottom:12px;padding:0;}
+.block_elan_faq .accordion-title{display:flex;flex-direction:row;justify-content:space-between;align-items:center;padding:24px;font-family:"Montserrat",sans-serif;font-weight:600;color:#0c0c0c;}
+.block_elan_faq .accordion-title i{display:none;}
+.block_elan_faq .accordion-title::after{content:"+";color:#b85c00;font-size:24px;font-weight:700;}
+.block_elan_faq .accordion-title.active::after,.block_elan_faq .accordion-item.active .accordion-title::after{content:"\2212";}
+.block_elan_faq .accordion-item.active,.block_elan_faq .accordion-item:has(.accordion-title.active){background:#f5ece3;}
+.block_elan_faq .accordion-content{padding:0 24px 22px;color:#3a4446;}
+
+/* ===== Contact : liste à icônes et carte d'envoi ===== */
+.block_elan_contact_area .contact-content .row{display:block;margin:0;}
+.block_elan_contact_area .contact-content .row>[class*="col-"]{flex:none;width:100%;max-width:100%;padding:0;}
+.block_elan_contact_area .single-contact-info-box{display:flex;align-items:center;gap:14px;text-align:left;margin:0 0 14px;padding:0;box-shadow:none;background:transparent;}
+.block_elan_contact_area .single-contact-info-box h3{display:none;}
+.block_elan_contact_area .single-contact-info-box .icon{position:static;flex:none;width:40px;height:40px;margin:0;box-shadow:none;}
+.block_elan_contact_area .single-contact-info-box p{margin:0;font-weight:600;color:#0c0c0c;}
+.dato-contact-card{background:#faf6f1;border-radius:20px;padding:36px;}
+.dato-contact-card h3{font-family:"Montserrat",sans-serif;font-weight:700;font-size:24px;margin:0 0 12px;}
+.dato-contact-card p{color:#3a4446;margin:0 0 24px;}
+.dato-contact-card .default-btn{display:block;text-align:center;}
+/* ===== Retouches FAQ et contact ===== */
+.block_elan_faq .accordion-title{display:flex !important;flex-direction:row !important;justify-content:space-between;align-items:center;padding:24px !important;text-align:left;}
+.block_elan_faq .accordion-item{border:0 !important;}
+.block_elan_faq .accordion-content{padding:0 24px 22px !important;}
+.block_elan_contact_area .single-contact-info-box .icon{width:48px !important;height:48px !important;line-height:48px !important;font-size:20px;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+.block_elan_contact_area .single-contact-info-box .icon i{font-size:22px;line-height:48px;}
+.block_elan_contact_area .single-contact-info-box{margin-bottom:10px !important;}
+.block_elan_faq .accordion-title{font-family:"Montserrat",sans-serif !important;font-size:17px;}
