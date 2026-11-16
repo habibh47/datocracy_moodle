@@ -407,3 +407,23 @@ body.cmid-12 .block_elan_feedback_2 .section-title{display:none;}
 @media (max-width:991px){.dato-legal{grid-template-columns:1fr;}}
 /* En-tête : fil d'Ariane aligné */
 .page-title-area .breadcrumb{padding-left:0;margin-left:0;}
+/* ===== Vérification ciblée (16/11) : règles qui perdaient face à « #page-site-index .block.card » ===== */
+#page-site-index .block.card.block_elan_cta,#page-site-index .block.card.block_elan_course_filter,#page-site-index .block.card.block_elan_about_area{background:#faf6f1 !important;}
+.dato-center .features-box{text-align:center !important;}
+.dato-center .features-box [class^="ri-"],.dato-center .features-box [class*=" ri-"]{margin-left:auto !important;margin-right:auto !important;}
+.dato-center .features-box h3,.dato-center .features-box p{text-align:center !important;}
+.block_elan_about_area .features-list{display:flex !important;flex-wrap:wrap;gap:12px;list-style:none;padding:0 !important;margin:24px 0;}
+.block_elan_about_area .features-list li{display:flex;align-items:center;gap:8px;background:#fff;border-radius:10px;padding:12px 18px;width:auto !important;float:none !important;margin:0 !important;}
+.block_elan_about_area .features-list li i{position:static !important;margin:0 !important;}
+.block_elan_about_area .about-content,.block_elan_about_area .about-inner-area::before,.block_elan_about_area .about-inner-area::after{background:transparent !important;box-shadow:none !important;}
+.funfacts-area{padding-top:56px !important;padding-bottom:16px !important;}
+.block_elan_contact_area .row.align-items-center{align-items:flex-start !important;}
+.block_elan_contact_area .contact-content>p{max-width:560px;}
+.block_elan_contact_area .row.pb-100{padding-bottom:32px !important;}
+.dato-contact-card{display:block;padding:36px 40px !important;box-sizing:border-box;}
+.dato-contact-card p{display:block;width:auto !important;padding:0 !important;margin:0 0 24px !important;}
+.features-box .ri-number-1::before,.features-box .ri-number-2::before,.features-box .ri-number-3::before,.features-box .ri-number-4::before{font-family:"Montserrat",sans-serif !important;font-weight:700;font-size:24px;}
+.features-box .ri-number-1::before{content:"1" !important;}
+.features-box .ri-number-2::before{content:"2" !important;}
+.features-box .ri-number-3::before{content:"3" !important;}
+.features-box .ri-number-4::before{content:"4" !important;}

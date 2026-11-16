@@ -35,6 +35,9 @@
     }
     // Éléments d'interface ajoutés côté navigateur : 2e bouton du hero, bouton unique du blog, bascule FR/EN, « Read More ».
     function addExtras() {
+        var first = document.querySelector('.block_elan_features_area_two');
+        if (first) { first.classList.add('dato-center'); }
+        document.querySelectorAll('.single-courses-box .price').forEach(function (p) { if (!p.textContent.trim()) { p.textContent = 'Gratuit'; } });
         var hero = document.querySelector('.block_elan_banner_1 .main-banner-content .default-btn');
         if (hero && !document.querySelector('.dato-btn-outline')) {
             var a = document.createElement('a'); a.className = 'dato-btn-outline'; a.href = '/course/index.php'; a.textContent = 'Découvrir les cours';
