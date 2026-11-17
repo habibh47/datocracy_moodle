@@ -58,7 +58,7 @@ foreach ($modinfo->get_section_info_all() as $section) {
     }
     $n++;
     $title = trim($format->get_section_name($section));
-    $chapters[] = ['title' => ($title !== '' && $section->section > 0) ? $title : ('Chapitre ' . $n), 'lessons' => $lessons];
+    $chapters[] = ['title' => ($title !== '' && $section->section > 0) ? $title : ((current_language() === 'en' ? 'Chapter ' : 'Chapitre ') . $n), 'lessons' => $lessons];
 }
 
 $pct = 0;
