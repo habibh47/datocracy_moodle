@@ -26,7 +26,7 @@ $on = [
 ];
 
 $templatecontext += $on + [
-    'pagetitle' => $on['nav_on_assignments'] ? 'Devoirs' : ($on['nav_on_certificates'] ? 'Certificats' : ($on['nav_on_profile'] ? 'Mon profil' : ($PAGE->heading ?: format_string($PAGE->title)))),
+    'pagetitle' => $on['nav_on_assignments'] ? get_string('nav_assignments', 'theme_datocracy') : ($on['nav_on_certificates'] ? get_string('nav_certificates', 'theme_datocracy') : ($on['nav_on_profile'] ? get_string('nav_profile', 'theme_datocracy') : ($PAGE->heading ?: format_string($PAGE->title)))),
     'fullname' => fullname($USER),
     'userpicture' => $OUTPUT->user_picture($USER, ['size' => 44, 'link' => false, 'class' => 'dato-avatar']),
     'url_dashboard' => (new moodle_url('/my/'))->out(false),
