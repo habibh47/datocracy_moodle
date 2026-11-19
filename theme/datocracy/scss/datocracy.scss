@@ -454,3 +454,21 @@ html:lang(en) #page-login-index .loginform h1.h2::after{content:"Welcome back!";
 html:lang(en) #page-login-index .loginform p.text-muted::after{content:"Sign in to continue your courses.";}
 html:lang(en) #page-login-index::after,html:lang(en) #page-login-signup::after,html:lang(en) #page-login-forgot_password::after{content:"Access to data is access to power.";}
 .dato-login,.others-option .default-btn{white-space:nowrap;}
+
+/* ===== Revue mobile : étapes numérotées, bande blanche avant le bandeau de certification, page Contact ===== */
+.block_elan_features_area_two .icon i[class*="ri-number-"]{color:#fff !important;}
+.block_elan_cta_three .pt-100{padding-top:0 !important;}
+@media (max-width:767px){
+  .block_elan_contact_area .contact-content{text-align:left !important;}
+  .block_elan_contact_area .contact-content .row{justify-content:flex-start !important;}
+  .block_elan_contact_area .contact-content .row > [class*="col-"]{flex:0 0 100% !important;max-width:100% !important;}
+  .block_elan_contact_area .single-contact-info-box{justify-content:flex-start !important;}
+  .block_elan_contact_area .single-contact-info-box p{text-align:left !important;}
+  .dato-contact-card{padding:28px 24px !important;}
+  .dato-contact-card p{white-space:normal !important;width:100% !important;max-width:100% !important;}
+}
+/* Contact (mobile) : les marges latérales automatiques de l'icône décalaient les lignes ; bande blanche vide des pages à blocs */
+@media (max-width:767px){
+  .block_elan_contact_area .single-contact-info-box .icon{margin:0 !important;}
+}
+#page-mod-page-view #region-main:not(:has(.dato-legal)):not(:has(.dato-course)){display:none !important;}@media (max-width:767px){.block_elan_contact_area .pb-100{padding-bottom:40px !important;}}

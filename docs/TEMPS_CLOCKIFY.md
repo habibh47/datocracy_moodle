@@ -63,3 +63,22 @@ Si Habib a suivi l'écran pendant les exécutions de l'IA, les plages continues 
 ### Conséquence sur la saisie
 
 L'estimation de 13 h 15 donnée plus haut dépasse la présence maximale observée (8 h 20) : elle est trop haute pour du temps réel. À saisir dans Clockify : entre **2 h 07** (temps strictement actif) et **8 h 20** (présence totale), selon ce que Habib décide de compter. La référence sans IA (46 h) reste l'effort équivalent d'un développeur seul.
+
+
+## Mise à jour du 19/11/2026 : version anglaise, vérifications, achèvement SCORM, revue mobile
+
+Mesure faite sur les horodatages de la session (heure UTC = heure de Dakar), à partir du 16/11 à 14:44 (première demande sur la traduction anglaise). Deux plafonds d'écart entre échanges : 3 min (strict) et 10 min (tolérant).
+
+| Jour | Travail | Actif strict | Actif tolérant |
+|---|---|---|---|
+| 16/11 (14:44–23:09) | Traduction FR/EN (dictionnaire issu du Figma, filtre multilang, blocs, pages, pied de page, menu), correctifs d'affichage | 0 h 28 | 0 h 31 |
+| 17/11 (11:33–17:29) | Vérification des pages publiques et de l'espace apprenant en anglais, menu utilisateur, titres, nom court du cours, pages natives Moodle | 0 h 52 | 1 h 39 |
+| 18/11 | Ouverture de session seulement | 0 h 01 | 0 h 01 |
+| 19/11 (11:27–14:40) | Lecture d'une leçon, correction de l'achèvement SCORM (valeur 3 → 6), revue mobile | 0 h 27 | 1 h 02 |
+| **Total de la période** | | **1 h 48** | **3 h 13** |
+
+Commits de la période : `dbdd7b2`, `7edab20`, `4c1fe6d`, `656a3b4`, `6d2e960`, `e2906c7`.
+
+### À saisir dans Clockify pour cette période
+
+Entre **1 h 48** (strict) et **3 h 13** (tolérant). Cumul avec la mesure précédente (2 h 07 actif) : entre **3 h 55** et **5 h 20**. La présence totale à l'écran reste la borne haute, à décider par Habib.
