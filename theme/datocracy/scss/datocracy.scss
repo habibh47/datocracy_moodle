@@ -489,3 +489,22 @@ html:lang(en) #page-login-index::after,html:lang(en) #page-login-signup::after,h
   #page-login-forgot_password:not(:has(.login-area)) #page-wrapper{margin-left:0;padding:0 0 40px;}
   #page-login-index:not(:has(.login-area)) #page-content,#page-login-signup:not(:has(.login-area)) #page-content,#page-login-forgot_password:not(:has(.login-area)) #page-content{padding:28px 20px 0;}
 }
+/* ===== Écran scindé : lien sur le logo et barre de retour ===== */
+.dato-auth-logo{position:fixed;left:56px;top:44px;width:200px;height:64px;z-index:8;display:block;}
+.dato-auth-nav{position:fixed;top:36px;left:696px;z-index:9;display:flex;gap:24px;align-items:center;font-family:"Montserrat",sans-serif;font-weight:600;font-size:15px;}
+.dato-auth-nav a{color:#b85c00;text-decoration:none;}
+.dato-auth-nav a:hover{text-decoration:underline;}
+@media (max-width:991px){
+  .dato-auth-logo{display:none;}
+  .dato-auth-nav{left:20px;top:20px;font-size:14px;gap:16px;}
+  body:not(:has(.login-area)) .dato-auth-nav{display:none;}
+}
+/* Barre de retour : alignée sur le formulaire, place réservée au-dessus ; sur mobile le menu du site reste affiché */
+#page-login-index .login-area,#page-login-signup .login-area,#page-login-forgot_password .login-area{padding-top:96px;}
+.dato-auth-nav{left:calc(640px + (100vw - 640px - 520px) / 2);}
+@media (max-width:991px){
+  #page-login-index .login-area,#page-login-signup .login-area,#page-login-forgot_password .login-area{padding-top:80px;}
+  .dato-auth-nav{display:none !important;}
+}@media (min-width:992px){
+  #page-login-signup .login-container,#page-login-forgot_password .login-container{margin-top:72px !important;margin-bottom:24px;}
+}

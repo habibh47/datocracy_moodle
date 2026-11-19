@@ -83,7 +83,21 @@
             if (/Fran\u00e7ais|English/.test(li.textContent)) { li.style.display = 'none'; }
         });
     }
-    function init() { addContactCard(); addExtras(); setTimeout(addExtras, 1200); setTimeout(openFirstFaq, 900); }
+    // Écran scindé (connexion, inscription, mot de passe oublié) : le menu étant masqué, on ajoute un lien sur le logo
+    // et une barre « Retour à l'accueil » / « Connexion » pour ne pas enfermer le visiteur.
+    function addAuthNav() {
+        var id = document.body.id;
+        if (['page-login-index', 'page-login-signup', 'page-login-forgot_password'].indexOf(id) === -1 || document.querySelector('.dato-auth-nav')) { return; }
+        var logo = document.createElement('a');
+        logo.className = 'dato-auth-logo'; logo.href = '/'; logo.setAttribute('aria-label', T('Retour à l\'accueil', 'Back to home'));
+        document.body.appendChild(logo);
+        var nav = document.createElement('div');
+        nav.className = 'dato-auth-nav';
+        var html = '<a href="/">&larr; ' + T('Retour à l\'accueil', 'Back to home') + '</a>';
+        if (id !== 'page-login-index') { html += '<a href="/login/index.php">' + T('Déjà un compte ? Connexion', 'Already registered? Sign in') + '</a>'; }
+        nav.innerHTML = html;
+        document.body.appendChild(nav);
+    }    function init() { addAuthNav(); addContactCard(); addExtras(); setTimeout(addExtras, 1200); setTimeout(openFirstFaq, 900); }
     if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
     if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', rewrite); } else { rewrite(); }
     setTimeout(rewrite, 1500);
