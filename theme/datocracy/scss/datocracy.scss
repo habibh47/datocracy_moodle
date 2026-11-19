@@ -486,5 +486,6 @@ html:lang(en) #page-login-index::after,html:lang(en) #page-login-signup::after,h
 @media (max-width:991px){
   #page-login-index:not(:has(.login-area)) #page-wrapper,
   #page-login-signup:not(:has(.login-area)) #page-wrapper,
-  #page-login-forgot_password:not(:has(.login-area)) #page-wrapper{margin-left:0;padding:120px 20px 40px;}
+  #page-login-forgot_password:not(:has(.login-area)) #page-wrapper{margin-left:0;padding:0 0 40px;}
+  #page-login-index:not(:has(.login-area)) #page-content,#page-login-signup:not(:has(.login-area)) #page-content,#page-login-forgot_password:not(:has(.login-area)) #page-content{padding:28px 20px 0;}
 }
