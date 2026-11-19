@@ -17,7 +17,7 @@ $cmids = [];
 foreach ($DB->get_records('course_modules', ['course' => $courseid, 'deletioninprogress' => 0]) as $cm) {
     $DB->update_record('course_modules', (object) ['id' => $cm->id, 'completion' => COMPLETION_TRACKING_AUTOMATIC, 'completionview' => 0, 'completionexpected' => 0]);
     // Statut SCORM requis : 1 = réussi, 2 = terminé (les deux acceptés).
-    $DB->set_field('scorm', 'completionstatusrequired', 3, ['id' => $cm->instance]);
+    $DB->set_field('scorm', 'completionstatusrequired', 6, ['id' => $cm->instance]);
     $cmids[] = $cm->id;
 }
 rebuild_course_cache($courseid, true);
