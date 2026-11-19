@@ -472,3 +472,19 @@ html:lang(en) #page-login-index::after,html:lang(en) #page-login-signup::after,h
   .block_elan_contact_area .single-contact-info-box .icon{margin:0 !important;}
 }
 #page-mod-page-view #region-main:not(:has(.dato-legal)):not(:has(.dato-course)){display:none !important;}@media (max-width:767px){.block_elan_contact_area .pb-100{padding-bottom:40px !important;}}
+
+/* ===== Pages d'erreur ou de message sur l'écran scindé : sans bloc de connexion, le contenu passait sous l'image de gauche ===== */
+#page-login-index:not(:has(.login-area)) #page-wrapper,
+#page-login-signup:not(:has(.login-area)) #page-wrapper,
+#page-login-forgot_password:not(:has(.login-area)) #page-wrapper{margin-left:640px;min-height:100vh;box-sizing:border-box;padding:96px 56px 40px;background:#fff;}
+#page-login-index:not(:has(.login-area)) #page-wrapper h1,
+#page-login-signup:not(:has(.login-area)) #page-wrapper h1,
+#page-login-forgot_password:not(:has(.login-area)) #page-wrapper h1{font-family:"Montserrat",sans-serif;font-size:32px;margin:0 0 20px;}
+#page-login-index:not(:has(.login-area)) #page-wrapper .continuebutton,
+#page-login-signup:not(:has(.login-area)) #page-wrapper .continuebutton,
+#page-login-forgot_password:not(:has(.login-area)) #page-wrapper .continuebutton{text-align:left;margin-top:16px;}
+@media (max-width:991px){
+  #page-login-index:not(:has(.login-area)) #page-wrapper,
+  #page-login-signup:not(:has(.login-area)) #page-wrapper,
+  #page-login-forgot_password:not(:has(.login-area)) #page-wrapper{margin-left:0;padding:120px 20px 40px;}
+}
