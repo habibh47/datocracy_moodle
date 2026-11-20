@@ -23,6 +23,7 @@
         </main>
         <aside class="dp-side">
             <h2>{{#str}}course_content, theme_datocracy{{/str}}</h2>
+            {{#not_enrolled}}<p class="dp-hint">{{#str}}enrol_to_access, theme_datocracy{{/str}}</p>{{/not_enrolled}}
             {{#chapters}}
             <div class="dp-chap">
                 <b>{{title}}</b>

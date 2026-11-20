@@ -193,6 +193,8 @@ body.dato-player-page{background:#fff;}
 .dp-chap li.now{background:#fce9d3;}
 .dp-chap li i{color:#f18619;font-size:18px;}
 .dp-chap li a{color:#0c0c0c;font-size:15px;}
+.dp-chap li span{color:#6b7476;font-size:15px;}
+.dp-hint{margin:-8px 0 18px;color:#3a4446;font-size:15px;}
 .dp-main .page-title-area,.dp-main .breadcrumb{display:none;}
 @media (max-width:991px){.dp-body{grid-template-columns:1fr;}.dp-bar{padding:0 16px;gap:12px;}.dp-bar .dp-title{display:none;}}
 .dp-main .btn-primary,.dp-main .btn-secondary.active{background:#f18619 !important;border-color:#f18619 !important;color:#0c0c0c !important;}

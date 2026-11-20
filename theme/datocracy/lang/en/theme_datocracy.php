@@ -24,4 +24,5 @@ $string['upcoming'] = 'Coming up';
 $string['no_upcoming'] = 'Nothing due in the next 30 days.';
 $string['quit'] = 'Exit';
 $string['course_content'] = 'Course content';
+$string['enrol_to_access'] = 'Enrol in the course to access the lessons.';
 $string['privacy:metadata'] = 'The datocracy theme does not store any personal data.';
