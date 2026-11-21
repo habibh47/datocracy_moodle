@@ -1,4 +1,4 @@
-/* ===== Ordre des feuilles : dans un thème enfant, Elan est chargé avant le SCSS de Boost.
+﻿/* ===== Ordre des feuilles : dans un thème enfant, Elan est chargé avant le SCSS de Boost.
    On rétablit ici les règles de base d'Elan que Boost écrase (titres, liens). ===== */
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{font-weight:700;color:var(--blackColor);}
 a{color:var(--blackColor);text-decoration:none;}
@@ -510,3 +510,8 @@ html:lang(en) #page-login-index::after,html:lang(en) #page-login-signup::after,h
 }@media (min-width:992px){
   #page-login-signup .login-container,#page-login-forgot_password .login-container{margin-top:72px !important;margin-bottom:24px;}
 }
+/* Connexion / inscription : l'icône « œil » du mot de passe reste dans le champ (au lieu de passer en dessous). */
+#page-login-index .toggle-sensitive-wrapper,#page-login-signup .toggle-sensitive-wrapper{position:relative;flex-wrap:nowrap;}
+#page-login-index .toggle-sensitive-wrapper .form-control,#page-login-signup .toggle-sensitive-wrapper .form-control{padding-right:56px;}
+#page-login-index .toggle-sensitive-btn,#page-login-signup .toggle-sensitive-btn{position:absolute !important;right:6px;top:50%;transform:translateY(-50%);z-index:6;width:44px;height:44px;padding:0;background:transparent;border:0;color:#3a4446;box-shadow:none;}
+#page-login-index .toggle-sensitive-btn:hover,#page-login-signup .toggle-sensitive-btn:hover{background:#faf6f1;color:#b85c00;}
