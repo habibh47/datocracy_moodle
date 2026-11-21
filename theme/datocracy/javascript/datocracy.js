@@ -15,9 +15,20 @@
         item.innerHTML = '<a class="dato-login" href="/login/index.php">' + T('Connexion', 'Sign in') + '</a>';
         box.insertBefore(item, box.firstChild);
     }
+    // Mobile : le menu hamburger (cloné par Elan) ne contient pas le bouton « Connexion » de l'en-tête ; on l'y ajoute.
+    function addMobileLogin() {
+        document.querySelectorAll('.mean-nav ul.navbar-nav').forEach(function (ul) {
+            if (ul.querySelector('.dato-menu-login')) { return; }
+            var li = document.createElement('li');
+            li.className = 'nav-item dato-menu-login';
+            li.innerHTML = '<a class="nav-link" href="/login/index.php">' + T('Connexion', 'Sign in') + '</a>';
+            ul.appendChild(li);
+        });
+    }
     function rewrite() {
         if (isLoggedIn()) { return; }
         addLogin();
+        addMobileLogin();
         document.querySelectorAll('a[href*="/course/view.php?id="]').forEach(function (a) {
             var m = a.getAttribute('href').match(/\/course\/view\.php\?id=(\d+)/);
             if (m && publicsheets[m[1]]) { a.setAttribute('href', publicsheets[m[1]]); }
@@ -101,4 +112,5 @@
     if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
     if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', rewrite); } else { rewrite(); }
     setTimeout(rewrite, 1500);
+    setTimeout(rewrite, 3500);
 })();
