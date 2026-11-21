@@ -108,7 +108,13 @@
         if (id !== 'page-login-index') { html += '<a href="/login/index.php">' + T('Déjà un compte ? Connexion', 'Already registered? Sign in') + '</a>'; }
         nav.innerHTML = html;
         document.body.appendChild(nav);
-    }    function init() { addAuthNav(); addContactCard(); addExtras(); setTimeout(addExtras, 1200); setTimeout(openFirstFaq, 900); }
+    }
+    // Connexion : texte d'aide du champ identifiant raccourci (le texte de Moodle est coupé sur mobile).
+    function shortenLoginPlaceholder() {
+        var u = document.body.id === 'page-login-index' ? document.querySelector('#username') : null;
+        if (u) { u.placeholder = T('Identifiant ou e-mail', 'Username or email'); }
+    }
+    function init() { addAuthNav(); shortenLoginPlaceholder(); addContactCard(); addExtras(); setTimeout(addExtras, 1200); setTimeout(openFirstFaq, 900); }
     if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
     if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', rewrite); } else { rewrite(); }
     setTimeout(rewrite, 1500);
