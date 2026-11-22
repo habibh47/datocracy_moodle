@@ -17,3 +17,8 @@ elan/
 
 # Feuilles d'Elan copiées au déploiement (licence commerciale)
 theme/datocracy/style/
+
+# Sortie de graphify et analyse des captures LearnWorlds (donnees du client, a garder en local)
+graphify-out/
+captures/
+CAPTURES_LEARNWORLDS.md

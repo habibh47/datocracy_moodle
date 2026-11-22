@@ -1,9 +1,9 @@
 # Comparatif LearnWorlds / Moodle datocracy et proposition de roadmap (20/11/2026)
 
 ## Sources et limites
-- **LearnWorlds** : arborescence complète du menu du tableau de bord auteur (offre « Learning Center »), relevée dans le navigateur. Le contenu des écrans n'a pas pu être lu (affichage dans un cadre non accessible, captures impossibles) : les fonctions sont donc comparées **par leur intitulé**, sans avoir vérifié leur usage réel ni leur paramétrage chez datocracy.
-- **Cahier des charges de refonte** (225 h, 6 sprints) : plugins, développements et risques prévus.
-- **Moodle datocracy** : état de staging, voir `docs/ETAT.md`. Le cahier des charges cite Moodle 4.5 et un thème acheté ; la réalisation utilise **Moodle 5.2.2 et le thème Elan**.
+- **LearnWorlds** : arborescence complète du menu du tableau de bord auteur (offre « Learning Center ») et **45 captures d'écran** fournies par l'équipe (20/11/2026), analysées écran par écran dans un fichier conservé en local (données du client). Les captures ne couvrent pas l'inscription ni la connexion, ni le lecteur mobile.
+- **Cahier des charges de refonte** (225 h, 6 sprints), rédigé avant le choix du thème : plugins, développements et risques prévus.
+- **Moodle datocracy** : état de staging, voir `docs/ETAT.md` (Moodle 5.2.2, thème Elan).
 - Les capacités de Moodle indiquées « natif » ou « plugin » viennent de la connaissance générale de la plateforme et sont **à confirmer en recette**. Les heures sont des ordres de grandeur, non validés.
 
 ## 1. Comparatif par domaine
@@ -38,7 +38,6 @@ Statut sur staging : **Fait** · **Partiel** · **À faire** · **Hors périmèt
 | Approvals | Inscription avec approbation (plugin à confirmer) | À faire | |
 | Tags | Étiquettes natives | Non vérifié | |
 | Leads | Aucun équivalent | À faire | Collecte de contacts avant inscription |
-| Multiple seats | Aucun équivalent direct | À faire | Licences par organisation, pertinent pour ONG et institutions |
 | Automations | Synchronisation de cohortes, règles par plugin | À faire | |
 | Inscription et confirmation par e-mail | Auto-inscription + SMTP | **Fait (20/11)** | Envoi testé de bout en bout ; réception en boîte à confirmer |
 | Connexion Google / LinkedIn | OAuth2 | À faire | Boutons du Figma, applications OAuth à créer par le client |
@@ -56,9 +55,9 @@ Statut sur staging : **Fait** · **Partiel** · **À faire** · **Hors périmèt
 ### E-commerce
 | LearnWorlds | Moodle | Statut | Remarque |
 |---|---|---|---|
-| Offers, Payments, Plans, Cart | Passerelles de paiement (PayPal, Stripe) | Hors périmètre | Cours gratuit actuel ; à activer au premier cours payant |
+| Offers, Payments, Plans, Cart | Inscription par paiement + passerelle adaptée à l'Afrique : Mobile Money (Orange Money, Wave, MTN MoMo) et carte via un agrégateur (PayDunya, CinetPay, Flutterwave ou Paystack) | À faire (au premier cours payant) | Cours gratuit actuel. Plugin Moodle de l'agrégateur retenu **à vérifier** avant chiffrage ; sinon développement d'une passerelle de paiement |
 | Gifts, Custom deals, Recommendations | Aucun équivalent | Hors périmètre | |
-| Licenses | Voir « Multiple seats » | À faire | |
+| Multiple seats, Licenses | | Hors périmètre | Écartés par décision du client |
 | Coupons | Plugin Enrolment Coupon (cahier des charges) | Hors périmètre | |
 
 ### Marketing
@@ -115,12 +114,13 @@ Statut sur staging : **Fait** · **Partiel** · **À faire** · **Hors périmèt
 6. Message groupé par cohorte et rappels d'inactivité (10 h).
 
 **Étape 3, selon la demande**
-- Paiement (PayPal/Stripe) au premier cours payant (8 h).
-- Licences par organisation, « multiple seats » (30 h et plus).
+- Paiement par Mobile Money et carte (agrégateur à choisir) au premier cours payant : 8 h à **re-estimer** selon le plugin disponible.
 - Communauté (forums habillés), lettre d'information, assistant IA, application mobile.
 
 ## 4. Décisions à prendre
-1. Le **public visé au lancement** : individuel gratuit, ou organisations (ONG, institutions) avec licences ? Cela décide de l'ordre entre étapes 2 et 3.
-2. La **migration depuis LearnWorlds** (script de 30 h au cahier des charges) : y a-t-il des apprenants et des cours à reprendre, ou le lancement part de zéro ?
-3. Le **modèle économique** : gratuit durable ou payant, pour fixer la date de la passerelle de paiement.
-4. Les écrans LearnWorlds réellement utilisés par l'équipe aujourd'hui (rapports, automatisations, communauté), à relever pour ne rien oublier.
+1. La **migration depuis LearnWorlds** (script de 30 h au cahier des charges) : le compte LearnWorlds actuel contient déjà des utilisateurs, des certificats et des campagnes d'e-mails. Faut-il reprendre les comptes, les progressions et les certificats, ou le lancement part-il de zéro ?
+2. Le **modèle économique** : gratuit durable ou payant, pour fixer la date de la passerelle de paiement.
+3. L'**agrégateur de paiement** : PayDunya, CinetPay, Flutterwave ou Paystack (pays couverts, commissions, plugin Moodle existant).
+4. Les **automatisations** à reproduire en priorité (bienvenue, relance d'inactivité, félicitations) : une seule règle, l'e-mail de bienvenue, est active aujourd'hui.
+
+Décisions déjà prises : pas de « multiple seats » ni de licences par organisation ; paiement par les moyens les plus utilisés en Afrique.
